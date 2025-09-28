@@ -2,7 +2,7 @@
 count=5
 echo "starting countdown"
 
-while [ $count -gt 0 ]; then
+while [ $count -gt 0 ] ; then
 do
     echo "time left: $count"
     sleep 1
