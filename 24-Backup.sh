@@ -14,7 +14,7 @@ SCRIPT_NAME=$( echo $0 | cut -d "." f1 )
 LOG_FILE=$LOGS_FOLDER/$SCRIPT_NAME.log
 
 mkdir -p $LOGS_FOLDER
-echo "scriprt started execution at : $date" | tee -a $LOG_FILE
+echo "scriprt started execution at : $date " | tee -a $LOG_FILE
 
 if [ $USERID -ne 0 ] ; then
     echo " run the script with root privileges"
@@ -38,7 +38,7 @@ if [ ! -d $SOURCE_DIR ] ; then
 fi
 
 #Check Destination directory exists or not
-if [ ! -d DEST_DIR ] ; then
+if [ ! -d $DEST_DIR ] ; then
     echo -e "$R Destination Directory doesn't exist $N"
 fi
 
