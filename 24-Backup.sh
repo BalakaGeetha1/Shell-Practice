@@ -55,7 +55,7 @@ FILES=$( find $SOURCE_DIR -type f -mtime +14 -size +10M )
     #Check if archival success or not
     if [ -f $ZIP_FILE_NAME]; then
         echo -e "$G Archieval success $N"
-        whil IFS= read -r filepath
+        whil IFS=    read -r filepath
             do
                 echo "Deleting files: $filepath"
                 rm -rf $filepath
