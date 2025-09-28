@@ -5,7 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-UID=$(id -u)
+USERID=$(id -u)
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14}
@@ -16,7 +16,7 @@ LOG_FILE=$LOGS_FOLDER/$SCRIPT_NAME.log
 mkdir -p $LOGS_FOLDER
 echo "scriprt started execution at : $date" | tee -a $LOG_FILE
 
-if[ $UID -ne 0 ]; then
+if[ $USERID -ne 0 ]; then
     echo " run the script with root privileges"
     exit 1
 fi
