@@ -13,7 +13,7 @@ mkdir -p $LOGS_FOLDER
 echo "Script started execution at : $(date)" | tee -a $LOG_FILE
 SOURCE_DIR="/home/ec2-user/app-logs"
 
-if [ ! -d SOURCE_DIR ]; then
+if [ ! -d $SOURCE_DIR ]; then
     echo -e " $R ERROR:: Source directory $SOURCE_DIR does not exists $N"
     exit 1
 fi
