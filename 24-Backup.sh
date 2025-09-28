@@ -27,7 +27,7 @@ USAGE(){
 }
 
 #To check the arguments
-if[ $# -lt 2 ]; then
+if [ $# -lt 2 ]; then
     USAGE
 fi
 
