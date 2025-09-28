@@ -16,7 +16,7 @@ LOG_FILE=$LOGS_FOLDER/$SCRIPT_NAME.log
 mkdir -p $LOGS_FOLDER
 echo "scriprt started execution at : $date" | tee -a $LOG_FILE
 
-if[ $USERID -ne 0 ]; then
+if [ $USERID -ne 0 ] ; then
     echo " run the script with root privileges"
     exit 1
 fi
