@@ -8,9 +8,9 @@ N="\e[0m"
 USERID=$(id -u)
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=${3:-14}
+DAYS=${3: -14}
 LOGS_FOLDER="/var/log/shell-script"
-SCRIPT_NAME=$(echo $0 | cut -d "." f1)
+SCRIPT_NAME=$( echo $0 | cut -d "." f1 )
 LOG_FILE=$LOGS_FOLDER/$SCRIPT_NAME.log
 
 mkdir -p $LOGS_FOLDER
