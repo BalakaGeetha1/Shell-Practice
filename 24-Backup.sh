@@ -14,7 +14,7 @@ SCRIPT_NAME=$( echo $0 | cut -d "." f1 )
 LOG_FILE=$LOGS_FOLDER/$SCRIPT_NAME.log
 
 mkdir -p $LOGS_FOLDER
-echo "scriprt started execution at : $date " | tee -a $LOG_FILE
+echo "scriprt started execution at: $date " | tee -a $LOG_FILE
 
 if [ $USERID -ne 0 ] ; then
     echo " run the script with root privileges"
@@ -55,12 +55,12 @@ FILES=$( find $SOURCE_DIR -type f -mtime +14 -size +10M )
     #Check if archival success or not
     if [ -f $ZIP_FILE_NAME]; then
         echo -e "$G Archieval success $N"
-        whil IFS=    read -r filepath
-            do
-                echo "Deleting files: $filepath"
-                rm -rf $filepath
-                echo "Deleted files: $filepath"
-            done <<< $FILES
+            whil IFS= read -r filepath
+                do
+                    echo "Deleting files: $filepath"
+                    rm -rf $filepath
+                    echo "Deleted files: $filepath"
+                done <<< $FILES
     else
         echo "$R Archeval failure $N"
     fi
